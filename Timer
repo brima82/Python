@@ -1,0 +1,28 @@
+from time import *
+
+class MoneyCard:
+    def __init__(self, money):
+        self.money = money
+
+player1 = MoneyCard(200)
+player2 = MoneyCard(310)
+
+
+def calculateGameScore():
+    if player1.money > player2.money:
+        print('player1 wins with ' + str(player1.money))
+    else:
+        print('player2 wins with ' + str(player2.money))
+
+
+start_timer = time()
+struct = localtime(start_timer)
+print('\nStart Game At:', strftime('%X', struct))
+i = 1
+while i > -1:
+    print(i)
+    i -=1
+    sleep(1)
+    end_timer = time()
+
+calculateGameScore()
