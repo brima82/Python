@@ -1,0 +1,21 @@
+
+import random
+
+drawpile = ['card1','card2','card3','card4']
+
+player = []
+
+random.shuffle(drawpile)
+
+def pick_cards(n):
+  if n > 2:
+    print('Maximum of 2 cards')
+  else:
+    for i in range(n):
+      player.append(drawpile.pop(0))
+
+
+pick_cards(2)
+
+print(drawpile)
+print(player)
